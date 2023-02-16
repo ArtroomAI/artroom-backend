@@ -1,0 +1,15 @@
+name: artroom-sd
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - git
+  - python=3.10
+  - cudatoolkit=11.6
+  - pip=22.2.2
+  - pip:
+      - torchvision
+      - https://github.com/neonsecret/xformers/releases/download/v0.15w/xformers-0.0.15+3df785c.d20230110-cp310-cp310-win_amd64.whl
+      - torch --extra-index-url https://download.pytorch.org/whl/cu116
+      - -r requirements.txt
